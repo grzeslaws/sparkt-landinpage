@@ -1,0 +1,25 @@
+{
+  "name": "telematics",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "clear": "rm -rf public",
+    "build": "npm run clear && gulp build",
+    "start": "npm run clear && gulp watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.3",
+    "babel-preset-env": "1.6.1",
+    "gulp": "3.9.1",
+    "gulp-babel": "7.0.1",
+    "gulp-concat": "2.6.1",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "4.0.1",
+    "gulp-uglify": "3.0.0",
+    "sass-mq": "4.0.2"
+  },
+  "presets": "env"
+}
