@@ -14,5 +14,5 @@ to **/usr/local/etc/httpd/extra/httpd-vhosts.conf** add followings:
         ServerAlias www.sparkt.ai
     </VirtualHost>
 
-After that add the following to **code /etc/hosts**:
+After that add the following to **/etc/hosts**:
 > 127.0.0.1       sparkt.ai
