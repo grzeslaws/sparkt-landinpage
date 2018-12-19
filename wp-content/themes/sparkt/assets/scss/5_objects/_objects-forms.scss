@@ -1,0 +1,63 @@
+.o-form {
+    width: 100%;  
+    
+    &__wrapper-inputs {
+        display: flex;
+    }
+
+    &__input {
+        border: 0;
+        border-bottom: 1px solid $color-gray;
+        height: 47px;
+        width: 100%;
+        color: $color-gray;
+        outline: 0;
+        padding-left: $spacing-default * 2;
+        padding-right: $spacing-default * 2;
+        font-family: $font-family;
+        font-weight: $font-light;
+        transition: $transition-default;
+        letter-spacing: 1.8px;
+        margin-right: $spacing-default * 2;
+        margin-bottom: $spacing-default * 5;
+
+        &:focus {
+            border-bottom: 1px solid $color-primary;
+        }
+
+        &:last-child {
+            margin-right: unset;
+        }
+    }
+
+    &__checkbox-description {
+        font-size: $font-size-milli;
+        font-weight: $font-light;
+        letter-spacing: 1px;
+    }
+
+    &__wrapper-checkbox {
+        margin-right: $spacing-default * 2;
+    }
+
+    &__checkbox-description-link {
+        text-decoration: underline;
+        color: inherit;
+    }
+
+    ::-webkit-input-placeholder {
+        color: rgba($color-gray, 0.5);
+    }
+    
+    ::-moz-placeholder {
+        color: rgba($color-gray, 0.5);
+    }
+    
+    :-ms-input-placeholder {
+        color: rgba($color-gray, 0.5);
+    }
+    
+    :-moz-placeholder {
+        color: rgba($color-gray, 0.5);
+    }
+}

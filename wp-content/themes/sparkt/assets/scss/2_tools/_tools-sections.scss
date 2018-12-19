@@ -1,0 +1,28 @@
+@mixin plusSections {
+    
+    &__section {
+        position: relative;
+        margin-right: $spacing-default * 7;
+        flex: 1;
+
+        &:before {
+            content: "";
+            display: block;
+            width: $spacing-default * 4;
+            height: $spacing-default * 4;
+            background: url($path-images + "icon-plus.svg") no-repeat transparent;
+            position: absolute;
+            left: -$spacing-default * 4;
+            top: -$spacing-default * 4;
+            transition: $transition-slow;
+        }
+
+        &:hover {
+            cursor: default;
+
+            &:before {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}

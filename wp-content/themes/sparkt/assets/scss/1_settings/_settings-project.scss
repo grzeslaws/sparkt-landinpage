@@ -1,0 +1,71 @@
+/*------------------------------------*\
+  #PROJECT VARIABLES
+\*------------------------------------*/
+
+// Colors 
+$color-white: #fff;
+$color-black: #191D2C;
+
+$color-gray: #30333E;
+$color-gray-lighter: #D9D9D6;
+
+$color-primary: #FF5E00;
+$color-primary-lighter: #FFA800;
+
+$color-secondary: #2ACBB7;
+$color-secondary-lighter: #3BA699;
+
+// Gradients
+$gradient-default: linear-gradient(to top, $color-primary-lighter 0%, $color-primary 100%);
+$gradient-default-horizontal: linear-gradient(to right, $color-primary-lighter 0%, $color-primary 100%);
+
+$gradient-secondary-horizontal: linear-gradient(to right, $color-secondary-lighter 0%, $color-secondary 100%);
+$gradient-dark: linear-gradient(to top, $color-black 0%, $color-gray 100%);
+
+// Spacing
+$spacing-default: 8px;
+$spacing-section: 120px;
+
+// Widthd
+$page-width: 1360px;
+
+// Heights
+$menu-height: 88px;
+$menu-height-after-scroll: 88px;
+
+// Fonts
+$font-family: "Poppins", sans-serif;
+
+$font-size-paragraph: 18px;
+$font-size-btn: 16px;
+
+$font-size-xxl: 48px;
+$font-size-h1: 36px;
+$font-size-h2: 24px;
+$font-size-h3: 22px;
+$font-size-h4: 18px;
+
+$font-size-milli: 12px;
+
+$font-light: 300;
+$font-medium: 500;
+
+// Paths
+$path-images: '../images/';
+
+// Padding 
+$padding-default: $spacing-default * 3;
+
+// Transition
+$transition-default: all 300ms ease;
+$transition-slow: all 600ms ease;
+
+// Radius
+$radius-oval: 50px;
+
+// Breakpoints
+$mq-breakpoints: (small: 320px, medium: 740px, large: 1024px);
+
+// Shadows
+$shadow-default: 5px 5px 20px rgba(#FF5E00, 0.15);
+$shadow-images: 2px 2px 4px rgba($color-gray, 0.25), 15px 15px 70px rgba($color-gray, 0.02), 1px 1px 1px rgba($color-gray, 0.1);

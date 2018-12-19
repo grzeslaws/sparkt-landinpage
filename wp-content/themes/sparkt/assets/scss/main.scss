@@ -1,38 +1,7 @@
-.c-carousel {
-    width: 50%;
-    height: 300px;
-    background-color: lightgray;
-    display: flex;
-    overflow: hidden;
-    position: relative;
-
-    &__wrapper {
-        display: flex;
-        height: 100%;
-    }
-
-    &__img {
-        height: 100%;
-        background-size: cover;
-        transition: all 1s;
-    }
-
-    &__navigation {
-        position: absolute;
-        z-index: 1;
-        left: 0;
-        top: 0;
-    }
-
-    .next,
-    .prev {
-        cursor: pointer;
-        color: red;
-    }
-
-    .next {
-        cursor: pointer;
-    }
-
-    .prev {}
-}
+@import "./1_settings/all";
+@import "./2_tools/all";
+@import "./3_generic/all";
+@import "./4_elements/all";
+@import "./5_objects/all";
+@import "./6_components/all";
+@import "./7_utilities/all";

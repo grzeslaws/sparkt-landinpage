@@ -1,0 +1,57 @@
+@import "../2_tools/tools-wrappers";
+@import "../2_tools/tools-sections";
+
+.c-insurance-companies {
+    @include wrapperPage;
+    @include plusSections;
+
+    background: $gradient-dark;
+    padding-bottom: $spacing-section / 2;
+    padding-top: $spacing-section;
+    margin-bottom: $spacing-section;
+
+    &__wrapper {
+        color: $color-white;
+    }
+
+    &__headline {
+        max-width: 1000px;
+        margin-bottom: $spacing-default * 12;
+    }
+
+    &__wrapper-sections {
+        display: flex;
+        margin-bottom: $spacing-default * 6;
+    }
+
+    &__section-description {
+        flex: 1;
+        font-weight: $font-light;
+        margin-right: $spacing-default * 7;
+        font-size: $font-size-paragraph;
+        margin-bottom: $spacing-default * 12;   
+    }
+
+    &__section-headline {
+        font-size: $font-size-h3;
+    }
+
+    &__warpper-cta {
+        display: flex;
+    }
+
+    &__side {
+        flex: 1;
+        margin-right: $spacing-default * 4;
+    }
+
+    &__headline-cta {
+        font-size: $font-size-h2;
+        font-weight: $font-light;
+        margin-bottom: $spacing-default * 8;
+    }
+
+    &__img {
+        max-width: $spacing-default * 80;
+    }
+}

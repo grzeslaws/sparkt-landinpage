@@ -1,0 +1,106 @@
+@import "../2_tools/tools-wrappers";
+@import "../2_tools/tools-sections";
+
+.c-approaches-companies {
+    @include wrapperPage;
+    @include plusSections;
+
+    flex-direction: column;
+    margin-bottom: $spacing-section;
+    align-items: center;
+
+    &__wrapper {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__description {
+        max-width: $spacing-default * 80;
+        font-size: $font-size-h3;
+        margin: 0 auto $spacing-section;
+    }
+
+    &__headline {
+        text-align: center;
+        margin-bottom: $spacing-default * 8;
+    }
+
+    &__wrapper-box {
+        display: flex;
+        width: 1070px;
+        align-items: flex-start;
+    }
+
+    &__box {
+        flex: 1;
+        margin-right: $spacing-default * 13;
+        background-color: $color-white;
+        padding: $spacing-default * 9 $spacing-default * 4 $spacing-default * 9 $spacing-default * 13;
+        position: relative;
+
+        &:last-child {
+            margin-right: unset;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            height: $spacing-default;
+            width: 100%;
+            background-color: $color-primary;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        &--reset-padding-bottom {
+            padding-bottom: unset;
+        }
+    }
+
+    &__headline-box {
+        position: relative;
+        margin-bottom: $spacing-default * 3;
+    }
+
+    &__headline-id {
+        position: absolute;
+        right: calc(100% + #{$spacing-default} * 2);
+        top: -$spacing-default + 2;
+        font-size: $font-size-h1;
+        color: $color-primary;
+        font-weight: $font-medium;
+    }
+
+    &__p {
+        font-weight: $font-light;
+        margin-bottom: $spacing-default * 3;
+        position: relative;
+
+        &--ident {
+            padding-left: $spacing-default * 2;
+
+            &:before {
+                content: "";
+                display: block;
+                width: 2px;
+                height: calc(100% - #{$spacing-default});
+                background-color: $color-gray-lighter;
+                position: absolute;
+                left: 0;
+                top: $spacing-default / 2;
+            }
+        }
+    }
+
+    &__footer-box {
+        background-color: $color-primary;
+        color: $color-white;
+        padding: $spacing-default * 4;
+        font-size: $font-size-h3;
+        margin-left: $spacing-default * (-13);
+        margin-right: $spacing-default * (-4);
+        margin-top: $spacing-default * 8;
+    }
+}

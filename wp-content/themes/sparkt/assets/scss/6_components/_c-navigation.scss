@@ -1,0 +1,71 @@
+@import "../2_tools/tools-wrappers";
+
+.c-navigation {
+    @include wrapperPage;
+    
+    align-items: center;
+    height: $menu-height;
+    margin-bottom: $spacing-default * 13;
+
+    &__logo-link {
+        width: 83px;
+        height: 40px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        ul {
+            display: flex;
+            margin-left: $spacing-default * 6;
+
+            li {
+                margin-right: $spacing-default * 4;
+
+                &.current_page_item {
+                    a {
+                        font-weight: $font-medium;
+
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 2px;
+                            background: $gradient-default-horizontal;
+                        }
+                    }
+                }
+
+                a {
+                    font-weight: $font-light;
+                    color: $color-gray;
+                    position: relative;
+                    transition: $transition-default;
+
+                    &:hover {
+                        color: $color-primary;
+                    }
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background: transparent;
+                    }
+                }
+            }
+        }
+    }
+
+    &__wrapper-logo-menu {
+        display: flex;
+        align-items: center;
+    }
+}
