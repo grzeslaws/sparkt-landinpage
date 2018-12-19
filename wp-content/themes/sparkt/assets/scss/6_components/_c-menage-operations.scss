@@ -1,0 +1,42 @@
+@import "../2_tools/tools-wrappers";
+
+.c-menage-operations {
+    @include wrapperPage;
+    margin-bottom: $spacing-section;
+
+    &__wrapper-content {
+        display: flex;
+    }
+
+    &__headline {
+        max-width: 830px;
+        margin-bottom: $spacing-default * 8;
+    }
+
+    &__text {
+        font-weight: $font-light;
+        margin-bottom: $spacing-default * 8;
+    }
+
+    &__side {
+        flex: 1;
+        position: relative;
+        min-height: 442px;
+    }
+
+    &__img {
+        max-width: 480px;
+        box-shadow: $shadow-images;
+        position: absolute;
+
+        &--1 {
+            right: 0;
+            top: 0;
+        }
+
+        &--2 {
+            left: 0;
+            top: 100px;
+        }
+    }
+}

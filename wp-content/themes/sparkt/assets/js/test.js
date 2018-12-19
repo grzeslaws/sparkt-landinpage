@@ -32,4 +32,4 @@
         counter -= 1;
         showCurrent();
     });
-})();
+});

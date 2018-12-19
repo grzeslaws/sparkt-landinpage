@@ -1,0 +1,32 @@
+@import "../2_tools/tools-wrappers";
+@import "../2_tools/tools-sections";
+
+.c-contact-us {
+    @include wrapperPage;
+
+    margin-bottom: $spacing-section;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: $spacing-default * 80;
+    }
+
+    &__headline {
+        margin-bottom: $spacing-default * 4;
+    }
+
+    &__description {
+        font-weight: $font-light;
+    }
+
+    &__form {
+        margin-top: $spacing-default * 10;
+    }
+
+    &__wrapper-cta {
+        display: flex;
+        margin-top: $spacing-default * 5;
+    }
+}
