@@ -11,7 +11,7 @@ const showHidePostIcon = () => {
     });
 };
 
-const setMenuHEight = () => {
+const setMenuHeight = () => {
     window.addEventListener("scroll", () => {
         const menuEl = document.querySelector(".c-navigation");
         if (menuEl) {
@@ -29,4 +29,4 @@ const setMenuHEight = () => {
 };
 
 showHidePostIcon();
-setMenuHEight();
+setMenuHeight();
