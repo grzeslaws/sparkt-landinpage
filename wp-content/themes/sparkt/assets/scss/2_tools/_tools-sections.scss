@@ -1,9 +1,10 @@
-@mixin plusSections {
+@mixin plusSections($flex: 1, $margin-bottom: unset) {
     
     &__section {
         position: relative;
-        margin-right: $spacing-default * 7;
-        flex: 1;
+        padding-right: $spacing-default * 7;
+        flex: $flex;
+        margin-bottom: $margin-bottom;
 
         &:before {
             content: "";
@@ -24,5 +25,36 @@
                 transform: rotate(360deg);
             }
         }
+    }
+}
+
+@mixin ident($bgColor: $color-gray-lighter, $marginBottom: unset) {
+    &--ident {
+        padding-left: $spacing-default * 2;
+        margin-bottom: $marginBottom;
+
+        &:before {
+            content: "";
+            display: block;
+            width: 2px;
+            height: calc(100% - #{$spacing-default});
+            background-color: $bgColor;
+            position: absolute;
+            left: 0;
+            top: $spacing-default / 2;
+        }
+    }
+}
+
+@mixin bottomBoxBar($backgroundColor: $color-primary) {
+    &:after {
+        content: "";
+        display: block;
+        height: $spacing-default;
+        width: 100%;
+        background-color: $backgroundColor;
+        position: absolute;
+        bottom: 0;
+        left: 0;
     }
 }

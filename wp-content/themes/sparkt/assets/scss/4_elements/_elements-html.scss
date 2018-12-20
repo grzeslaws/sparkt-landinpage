@@ -9,7 +9,15 @@ html {
   letter-spacing: 1.8px;
 }
 
+body {
+  padding-top: $spacing-default * 13 + $menu-height;
+}
+
 p {
   font-size: $font-size-paragraph;
   line-height: 1.6;
+}
+
+strong {
+  font-weight: $font-medium;
 }

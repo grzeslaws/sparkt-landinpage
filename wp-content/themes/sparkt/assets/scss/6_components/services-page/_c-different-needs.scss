@@ -1,0 +1,82 @@
+@import "../../2_tools/tools-wrappers";
+@import "../../2_tools/tools-sections";
+
+.c-different-needs {
+
+    $c: &;
+
+    @include wrapperPage;
+
+    background-color: $color-gray-lightest;
+    padding-top: $spacing-section;
+    padding-bottom: $spacing-section;
+
+    &__headline,
+    &__description {
+        max-width: $spacing-default * 105;
+        margin-bottom: $spacing-default * 20;
+    }
+
+    &__headline {
+        margin-bottom: $spacing-default * 6;
+    }
+
+    &__description {
+        margin-bottom: $spacing-default * 8;
+        font-weight: $font-light;
+    }
+
+    &__box {
+        background-color: $color-white;
+        padding: ($spacing-default * 9) ($spacing-default * 13);
+        position: relative;
+        max-width: $spacing-default * 105;
+        margin: 0 auto ($spacing-default * 4);
+
+        &--1 {
+            @include bottomBoxBar(#FFD98F);
+        }
+
+        &--2 {
+            @include bottomBoxBar($color-primary-lighter);
+        }
+
+        &--3 {
+            @include bottomBoxBar($color-primary);
+        }
+
+        &:last-child {
+            margin-bottom: unset;
+        }
+    }
+
+    &__headline-box {
+        position: relative;
+        margin-bottom: $spacing-default * 3;
+    }
+
+    &__headline-id {
+        position: absolute;
+        right: calc(100% + #{$spacing-default} * 2);
+        top: -$spacing-default + 2;
+        font-size: $font-size-h1;
+        color: $color-primary;
+        font-weight: $font-medium;
+
+        #{$c}__box--1 & {
+            color: #FFD98F;
+        }
+
+        #{$c}__box--2 & {
+            color: $color-primary-lighter;
+        }
+
+        #{$c}__box--3 & {
+            color: $color-primary;
+        }
+    }
+
+    &__description-box {
+        font-weight: $font-light;
+    }
+}

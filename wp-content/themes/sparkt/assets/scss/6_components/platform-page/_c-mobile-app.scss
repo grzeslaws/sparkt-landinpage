@@ -1,0 +1,101 @@
+@import "../../2_tools/tools-wrappers";
+
+.c-mobile-app {
+    @include wrapperPage;
+
+    background: $gradient-gary;
+    padding-top: $spacing-section;
+    padding-bottom: $spacing-section;
+
+    &__description {
+        font-weight: $font-light;
+        margin-bottom: $spacing-default * 8;
+    }
+
+    &__description-bottom {
+        font-weight: $font-medium;
+        max-width: $spacing-section * 8;
+    }
+
+    &__headline {
+        margin-bottom: $spacing-default * 8;
+    }
+
+    &__wrapper-img {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: $page-width-narrow;
+        justify-content: center;
+        margin-bottom: $spacing-default * 8;
+    }
+
+    &__img {
+        max-width: 854px;
+    }
+
+    &__description-img {
+        position: absolute;
+        font-weight: $font-light;
+        max-width: $spacing-default * 40;
+        padding-left: $spacing-default * 2;
+        padding-right: $spacing-default * 2;
+
+        &:before {
+            content: "";
+            display: flex;
+            width: 1px;
+            position: absolute;
+            background-color: $color-primary;
+        }
+
+        &--1 {
+            text-align: right;
+            top: 0px;
+            left: 265px;
+
+            &:before {
+                right: 0;
+                top: 0;
+                height: 145px;
+            }
+        }
+
+        &--2 {
+            text-align: left;
+            top: 0px;
+            left: 868px;
+
+            &:before {
+                left: 0;
+                top: 0;
+                height: 345px;
+            }
+        }
+
+        &--3 {
+            text-align: right;
+            top: 529px;
+            left: 181px;
+
+            &:before {
+                right: 0;
+                bottom: 0;
+                height: 145px;
+            }
+        }
+
+        &--4 {
+            text-align: left;
+            top: 529px;
+            left: 787px;
+
+            &:before {
+                left: 0;
+                bottom: 0;
+                height: 183px;
+            }
+        }
+    }
+}

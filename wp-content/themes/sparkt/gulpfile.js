@@ -17,7 +17,7 @@ gulp.task("scss", function() {
 
 gulp.task("babel", function() {
     return gulp
-        .src([`${assetsPath}/js/test.js`])
+        .src([`${assetsPath}/js/main.js`])
         .pipe(
             babel({
                 presets: ["env"],

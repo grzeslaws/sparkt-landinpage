@@ -1,0 +1,45 @@
+@import "../../2_tools/tools-wrappers";
+
+.c-advanced-analytics {
+    @include wrapperPage;
+
+    background: $gradient-dark;
+    color: $color-white;
+    margin-bottom: $spacing-section;
+
+    &__headline {
+        margin-bottom: $spacing-default * 10;
+
+        &--smaller {
+            margin-bottom: $spacing-default * 5;
+        }
+    }
+
+    &__wrapper {
+        padding-top: $spacing-section;
+        padding-bottom: $spacing-section * 2/3;
+    }
+
+    &__wrapper-sides {
+        display: flex;
+        margin-bottom: $spacing-default * 10;
+    }
+
+    &__side {
+        flex: 1;
+    }
+
+    &__p, {
+        font-weight: $font-light;
+        position: relative;
+
+        @include ident($color-primary, $spacing-default * 3);
+
+        &--optional {
+
+            &:before {
+                background-color: $color-primary-lighter;
+            }
+        }
+    }
+}

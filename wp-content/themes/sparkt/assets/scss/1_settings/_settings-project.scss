@@ -8,6 +8,7 @@ $color-black: #191D2C;
 
 $color-gray: #30333E;
 $color-gray-lighter: #D9D9D6;
+$color-gray-lightest: #F7F7F7;
 
 $color-primary: #FF5E00;
 $color-primary-lighter: #FFA800;
@@ -22,16 +23,20 @@ $gradient-default-horizontal: linear-gradient(to right, $color-primary-lighter 0
 $gradient-secondary-horizontal: linear-gradient(to right, $color-secondary-lighter 0%, $color-secondary 100%);
 $gradient-dark: linear-gradient(to top, $color-black 0%, $color-gray 100%);
 
+$gradient-gary: linear-gradient(to top, $color-gray-lighter 0%, #F7F7F7 100%);
+
 // Spacing
 $spacing-default: 8px;
 $spacing-section: 120px;
 
 // Widthd
 $page-width: 1360px;
+$page-width-narrower: 1070px;
+$page-width-narrow: 640px;
 
 // Heights
 $menu-height: 88px;
-$menu-height-after-scroll: 88px;
+$menu-height-after-scroll: 64px;
 
 // Fonts
 $font-family: "Poppins", sans-serif;

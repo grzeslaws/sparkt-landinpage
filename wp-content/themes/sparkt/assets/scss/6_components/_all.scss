@@ -3,8 +3,20 @@
 \*------------------------------------*/
 
 @import "c-navigation";
-@import "c-menage-operations";
-@import "c-bespoke-algorithms";
-@import "c-insurance-companies";
-@import "c-approaches-companies";
-@import "c-contact-us";
+@import "c-footer";
+
+@import "./front-page/c-menage-operations";
+@import "./front-page/c-bespoke-algorithms";
+@import "./front-page/c-insurance-companies";
+@import "./front-page/c-approaches-companies";
+@import "./front-page/c-contact-us";
+
+@import "./platform-page/c-top-";
+@import "./platform-page/c-platform-gives-you";
+@import "./platform-page/c-advanced-analytics";
+@import "./platform-page/c-innovative";
+@import "./platform-page/c-mobile-app";
+
+@import "./services-page/c-we-offer";
+@import "./services-page/c-complex-and-scalable";
+@import "./services-page/c-different-needs";

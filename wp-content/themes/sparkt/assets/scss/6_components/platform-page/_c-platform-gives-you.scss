@@ -1,0 +1,32 @@
+@import "../../2_tools/tools-wrappers";
+@import "../../2_tools/tools-sections";
+
+.c-platform-gives-you {
+    @include wrapperPage;
+    @include plusSections(33%, $spacing-default * 10);
+
+    margin-bottom: $spacing-section;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__headline {
+        text-align: center;
+        margin-bottom: $spacing-default * 15;
+    }
+
+    &__wrapper-sections {
+        display: flex;
+        font-weight: $font-light;
+        max-width: $page-width-narrower;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    &__description {
+        text-align: center;
+    }
+}

@@ -1,5 +1,5 @@
-@import "../2_tools/tools-wrappers";
-@import "../2_tools/tools-sections";
+@import "../../2_tools/tools-wrappers";
+@import "../../2_tools/tools-sections";
 
 .c-insurance-companies {
     @include wrapperPage;
@@ -52,6 +52,6 @@
     }
 
     &__img {
-        max-width: $spacing-default * 80;
+        max-width: $page-width-narrow;
     }
 }
