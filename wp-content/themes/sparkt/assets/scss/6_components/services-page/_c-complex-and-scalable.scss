@@ -1,0 +1,34 @@
+@import "../../2_tools/tools-wrappers";
+@import "../../2_tools/tools-sections";
+
+.c-complex-and-scalable {
+    @include wrapperPage;
+    @include plusSections;
+
+    background: $gradient-dark;
+    color: $color-white;
+    padding-top: $spacing-section;
+    padding-bottom: $spacing-section / 2;
+
+    &__headline,
+    &__description {
+        max-width: $spacing-default * 105;
+        margin-bottom: $spacing-default * 20;
+    }
+
+    &__wrapper-sections {
+        display: flex;
+        font-weight: $font-light;
+        padding-left: 30%;
+        margin-bottom: $spacing-default * 12;
+    }
+
+    &__description {
+        font-weight: $font-light;
+        margin-bottom: $spacing-default * 6;
+
+        &--bold {
+            font-weight: $font-medium;
+        }
+    }
+}

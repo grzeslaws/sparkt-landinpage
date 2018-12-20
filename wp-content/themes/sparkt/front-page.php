@@ -1,14 +1,15 @@
+<?php
+/**
+ * Template Name: Front page
+ */
+?>
+
 <?php get_header(); ?>
 
-<?php if (have_posts()) : while (have_posts()) : the_post() ?>
-    <?php get_template_part("components/menage-operations-component") ?>
-    <?php get_template_part("components/bespoke-algorithms-component") ?>
-    <?php get_template_part("components/insurance-companies-component") ?>
-    <?php get_template_part("components/approaches-companies-component") ?>
-    <?php get_template_part("components/contact-us-component") ?>
-<?php endwhile;
-else : ?>
-    <p><?php __("No page found!") ?></p>
-<?php endif; ?>
+<?php get_template_part("components/front-page/menage-operations-component") ?>
+<?php get_template_part("components/front-page/bespoke-algorithms-component") ?>
+<?php get_template_part("components/front-page/insurance-companies-component") ?>
+<?php get_template_part("components/front-page/approaches-companies-component") ?>
+<?php get_template_part("components/front-page/contact-us-component") ?>
 
 <?php get_footer(); ?>

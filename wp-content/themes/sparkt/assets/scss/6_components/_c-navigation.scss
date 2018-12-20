@@ -5,7 +5,12 @@
     
     align-items: center;
     height: $menu-height;
-    margin-bottom: $spacing-default * 13;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    transition: height 300ms ease;
 
     &__logo-link {
         width: 83px;
@@ -67,5 +72,10 @@
     &__wrapper-logo-menu {
         display: flex;
         align-items: center;
+    }
+
+    &--lower {
+        height: $menu-height-after-scroll;
+        background-color: $color-white;
     }
 }

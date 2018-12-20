@@ -1,0 +1,21 @@
+@import "../../2_tools/tools-wrappers";
+
+.c-we-offer {
+    @include wrapperPage;
+
+    margin-bottom: $spacing-section;
+
+    &__headline,
+    &__description {
+        max-width: $spacing-default * 105;
+    }
+
+    &__headline {
+        margin-bottom: $spacing-default * 5;
+    }
+
+    &__description {
+        font-weight: $font-light;
+        font-size: $font-size-h2;
+    }
+}

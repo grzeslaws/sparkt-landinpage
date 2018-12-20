@@ -27,7 +27,7 @@
                 <a class="o-btn" href="#">Schedule demo</a>
             </div>
             <div class="c-insurance-companies__side">
-            <img class="c-insurance-companies__img" src='<?php echo get_template_directory_uri() ?>/public/images/total-trips.png' />
+                <img class="c-insurance-companies__img" src='<?php echo get_template_directory_uri() ?>/public/images/total-trips.png' />
             </div>
         </div>
     </div>

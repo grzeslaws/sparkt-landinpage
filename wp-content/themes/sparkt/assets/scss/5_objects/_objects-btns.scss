@@ -9,7 +9,6 @@
     min-width: $spacing-default * 40;
     padding: ($spacing-default / 2) ($spacing-default * 3);
     box-shadow: $shadow-default;
-    transition: $transition-default;
     background: transparent;
     color: $color-white;
     border: 0;
@@ -60,6 +59,10 @@
         min-width: unset;
     }
 
+    &--no-shadow {
+        box-shadow: unset;
+    }
+
     &__mask {
         position: absolute;
         left: 2px;
@@ -75,6 +78,18 @@
 
         &:hover {
             color: $color-primary;
+        }
+    }
+
+    .c-navigation--lower & {
+        background: $gradient-default-horizontal;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        box-shadow: unset;
+
+        &:before,
+        &:after {
+            display: none;
         }
     }
 }

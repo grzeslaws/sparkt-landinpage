@@ -1,5 +1,5 @@
-@import "../2_tools/tools-wrappers";
-@import "../2_tools/tools-sections";
+@import "../../2_tools/tools-wrappers";
+@import "../../2_tools/tools-sections";
 
 .c-contact-us {
     @include wrapperPage;
@@ -10,7 +10,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: $spacing-default * 80;
+        max-width: $page-width-narrow;
     }
 
     &__headline {
