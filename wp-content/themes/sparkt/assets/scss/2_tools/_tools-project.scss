@@ -42,7 +42,7 @@
     }
 
     &__wrapper-text {
-        max-width: $spacing-default * 105;
+        max-width: $max-width-text;
         padding-right: $spacing-default * 10;
         padding-top: $spacing-default * 6;
         color: $textColor;

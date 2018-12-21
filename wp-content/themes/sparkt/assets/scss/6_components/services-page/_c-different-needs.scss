@@ -10,7 +10,7 @@
 
     &__headline,
     &__description {
-        max-width: $spacing-default * 105;
+        max-width: $max-width-text;
         margin-bottom: $spacing-default * 20;
     }
 
@@ -27,7 +27,7 @@
         background-color: $color-white;
         padding: ($spacing-default * 9) ($spacing-default * 13);
         position: relative;
-        max-width: $spacing-default * 105;
+        max-width: $max-width-text;
         margin: 0 auto ($spacing-default * 4);
 
         &--1 {
