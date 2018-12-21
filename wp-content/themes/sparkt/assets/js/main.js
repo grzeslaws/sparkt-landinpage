@@ -28,5 +28,21 @@ const setMenuHeight = () => {
     });
 };
 
+const setWidthOfProjectPhoto = () => {
+    const setWidthOnImg = () => {
+        const wrapperTextRight = document.querySelector("[data-wrapper-text]").getBoundingClientRect().right;
+        const widthProjectEl = document.querySelector("[data-project]").getBoundingClientRect().width;
+        const imgEl = document.querySelectorAll("[data-img]");
+        Array.from(imgEl).map(i => (i.style.width = `${widthProjectEl - wrapperTextRight}px`));
+    };
+
+    window.addEventListener("resize", () => {
+        setWidthOnImg();
+    });
+
+    setWidthOnImg();
+};
+
 showHidePostIcon();
 setMenuHeight();
+setWidthOfProjectPhoto();

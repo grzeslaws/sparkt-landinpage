@@ -1,0 +1,85 @@
+@mixin project($backgoundColor: $color-white) {
+    @include wrapperPage;
+
+    $textColor: unset;
+
+    @if $backgoundColor != $color-white {
+        $textColor: $color-white
+    }
+
+    position: relative;
+    overflow: hidden;
+    background-color: $backgoundColor;
+
+    &__headline {
+        margin-bottom: $spacing-default;
+
+        &--small {
+            margin-bottom: $spacing-default * 4;
+            font-weight: $font-light;
+            color: $color-primary;
+        }
+
+        &--headline-tools-describe {
+            color: $color-gray;
+            margin-bottom: $spacing-default * 2;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__description {
+        margin-bottom: $spacing-default * 8;
+        font-weight: $font-light;
+        color: $color-primary;
+    }
+
+    &__text {
+        font-weight: $font-light;
+        margin-bottom: $spacing-default * 8;
+    }
+
+    &__wrapper-text {
+        max-width: $spacing-default * 105;
+        padding-right: $spacing-default * 10;
+        padding-top: $spacing-default * 6;
+        color: $textColor;
+    }
+
+    &__sidebar {
+        padding: ($spacing-default * 60) ($spacing-default * 2) ($spacing-default * 8) ($spacing-default * 2);
+        font-weight: $font-light;
+        position: relative;
+        color: $textColor;
+        max-width: $spacing-section * 3;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 1000%;
+            background-color: rgba($color-gray-lighter, 0.15);
+        }
+    }
+
+    &__img {
+        height: 400px;
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &__wrapper-tools {
+        margin-top: $spacing-default * 2;
+        margin-bottom: $spacing-default * 3;
+    }
+
+    &__tools-item {
+        margin-bottom: $spacing-default / 4;
+    }
+}
