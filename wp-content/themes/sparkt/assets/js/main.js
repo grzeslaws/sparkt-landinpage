@@ -47,41 +47,74 @@ const setWidthOfProjectPhoto = () => {
 };
 
 const roleSlider = () => {
+    if (!document.querySelector("[wrapper-slider-roles]")) {
+        return;
+    }
+
     const wrapperSliderRolesEl = document.querySelector("[wrapper-slider-roles]");
     const wrapperRolesEl = document.querySelector("[wrapper-roles]");
     const roleEl = wrapperSliderRolesEl.querySelector("span");
+
+    const firstChild = wrapperRolesEl.firstElementChild;
+    const firstChildClone = firstChild.cloneNode(true);
+    wrapperRolesEl.appendChild(firstChildClone);
+
     const roleHeight = roleEl.getBoundingClientRect().height;
     let counter = 1;
-    let resetTranslate;
     const roleArr = Array.from(wrapperSliderRolesEl.querySelectorAll("span"));
 
     wrapperSliderRolesEl.style.height = `${roleHeight}px`;
     setInterval(() => {
         if (counter < roleArr.length - 1) {
-            clearInterval(resetTranslate);
             wrapperRolesEl.style.transform = `translateY(${-roleHeight * counter}px)`;
             wrapperRolesEl.style.transitionDuration = "600ms";
             counter++;
         } else {
             wrapperRolesEl.style.transform = `translateY(${-roleHeight * counter}px)`;
-            resetTranslate = setInterval(() => {
+            setTimeout(() => {
                 wrapperRolesEl.style.transform = "translateY(0)";
                 wrapperRolesEl.style.transitionDuration = "0s";
             }, 1000);
             counter = 1;
         }
-
-        // const firstChild = wrapperRolesEl.firstElementChild;
-        // const firstChildClone = firstChild.cloneNode(true);
-        // wrapperRolesEl.appendChild(firstChildClone);
-        // wrapperRolesEl.firstElementChild.remove();
-
-        // const resetTranslate = setInterval(() => {
-        //     wrapperRolesEl.style.transform = "translateY(0)";
-        // }, 1000);
-
     }, 3000);
 };
+
+// const photosSlider = () => {
+//     if (!document.querySelector("[wrapper-slider-photos]")) {
+//         return;
+//     }
+
+//     const wrapperSliderPhotosEl = document.querySelector("[wrapper-slider-photos]");
+//     const wrapperPhotosEl = document.querySelector("[wrapper-photos]");
+//     const photoEl = wrapperSliderPhotosEl.querySelector("img");
+
+//     const firstChild = wrapperPhotosEl.firstElementChild;
+//     const firstChildClone = firstChild.cloneNode(true);
+//     wrapperPhotosEl.appendChild(firstChildClone);
+
+//     const photoWidth = photoEl.getBoundingClientRect().width;
+//     let counter = 1;
+//     let resetTranslate;
+//     const photosArr = Array.from(wrapperSliderPhotosEl.querySelectorAll("img"));
+
+//     wrapperSliderPhotosEl.style.height = `${photoWidth}px`;
+//     setInterval(() => {
+//         if (counter < photosArr.length - 1) {
+//             clearInterval(resetTranslate);
+//             wrapperPhotosEl.style.transform = `translateX(${-photoWidth * counter}px)`;
+//             wrapperPhotosEl.style.transitionDuration = "600ms";
+//             counter++;
+//         } else {
+//             wrapperPhotosEl.style.transform = `translateX(${-photoWidth * counter}px)`;
+//             resetTranslate = setInterval(() => {
+//                 wrapperPhotosEl.style.transform = "translateX(0)";
+//                 wrapperPhotosEl.style.transitionDuration = "0s";
+//             }, 1000);
+//             counter = 1;
+//         }
+//     }, 3000);
+// };
 
 const carousel = () => {
     const wrapper = document.querySelector(".c-carousel");
@@ -119,6 +152,30 @@ const carousel = () => {
     });
 };
 
+const showHideModal = () => {
+    const overlayEl = document.querySelector("[data-modal]");
+    const modalBoxEl = document.querySelector("[data-modal-box]");
+    const closeEl = document.querySelector("[data-close-modal]");
+
+    const hideModal = () => {
+        if (overlayEl.classList.contains("o-modal--show")) {
+            overlayEl.classList.remove("o-modal--show");
+        }
+        document.body.style.overflow = "unset";
+    }
+
+    document.querySelector("[data-schedule-demo]").addEventListener("click", () => {
+        overlayEl.classList.add("o-modal--show");
+        document.body.style.overflow = "hidden";
+
+        modalBoxEl.addEventListener("click", e => e.stopPropagation());
+    });
+
+    overlayEl.addEventListener("click", hideModal);
+    closeEl.addEventListener("click", hideModal);
+};
+
+showHideModal();
 roleSlider();
 showHidePostIcon();
 setMenuHeight();

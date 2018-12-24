@@ -82,6 +82,11 @@
         }
     }
 
+    &__wrapper-cta {
+        display: flex;
+        margin-top: $spacing-default * 5;
+    }
+
     ::-webkit-input-placeholder {
         color: rgba($color-gray, 0.5);
     }

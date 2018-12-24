@@ -24,15 +24,15 @@
                 </li>
             </ul>
             <div class="c-footer__title">Follow us</div>
-            <ul class="c-footer__wrapper-social">
-                <li class="c-footer__social-item">
-                    <a href="https://www.facebook.com/sparkbit.software/" target="_blank" class="c-footer__social-link"><img class="c-footer__back-to-top-icon" src='<?php echo get_template_directory_uri() ?>/public/images/icon-fb.svg' /></a>
+            <ul class="o-social__wrapper-social">
+                <li class="o-social__social-item">
+                    <a href="https://www.facebook.com/sparkbit.software/" target="_blank" class="o-social__social-link"><img src='<?php echo get_template_directory_uri() ?>/public/images/icon-fb.svg' /></a>
                 </li>
-                <li class="c-footer__social-item">
-                    <a href="https://twitter.com/_sparkbit_" target="_blank" class="c-footer__social-link"><img class="c-footer__back-to-top-icon" src='<?php echo get_template_directory_uri() ?>/public/images/icon-tw.svg' /></a>
+                <li class="o-social__social-item">
+                    <a href="https://twitter.com/_sparkbit_" target="_blank" class="o-social__social-link"><img src='<?php echo get_template_directory_uri() ?>/public/images/icon-tw.svg' /></a>
                 </li>
-                <li class="c-footer__social-item">
-                    <a href="https://www.linkedin.com/company/sparkbit?trk=company_logo" target="_blank" class="c-footer__social-link"><img class="c-footer__back-to-top-icon" src='<?php echo get_template_directory_uri() ?>/public/images/icon-in.svg' /></a>
+                <li class="o-social__social-item">
+                    <a href="https://www.linkedin.com/company/sparkbit?trk=company_logo" target="_blank" class="o-social__social-link"><img src='<?php echo get_template_directory_uri() ?>/public/images/icon-in.svg' /></a>
                 </li>
             </ul>
         </div>
