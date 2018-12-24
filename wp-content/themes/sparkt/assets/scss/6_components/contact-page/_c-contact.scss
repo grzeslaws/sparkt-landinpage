@@ -1,0 +1,44 @@
+.c-contact {
+    @include wrapperPage;
+
+    &__wrapper {
+        margin-bottom: $spacing-section;
+    }
+
+    &__description {
+        font-weight: $font-light;
+        max-width: $max-width-text;
+        margin-bottom: $spacing-default * 10;
+    }
+
+    &__headline {
+        margin-bottom: $spacing-default * 4;
+    }
+
+    &__headline-smaller {
+        margin-bottom: $spacing-default * 4;
+    }
+
+    &__wrapper-columns {
+        display: flex;
+    }
+
+    &__column {
+        flex: 1;
+        margin-right: $spacing-default * 4;
+        flex-direction: column;
+
+        &:last-child {
+            margin-right: unset;
+        }
+    }
+
+    &__addsress {
+        margin-bottom: $spacing-default * 8;
+        font-weight: $font-light;
+    }
+
+    &__wrapper-address {
+        padding-left: $spacing-default * 20;
+    }
+}

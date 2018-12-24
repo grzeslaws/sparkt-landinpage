@@ -1,0 +1,57 @@
+.c-description {
+    @include wrapperPage;
+
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+    &__headline {
+        font-weight: $font-medium;
+        margin-bottom: $spacing-default * 10;
+    }
+
+    &__title {
+        margin-bottom: $spacing-default * 10;
+        font-weight: $font-light;
+        max-width: $max-width-text;
+    }
+
+    &__title-link {
+        text-decoration: underline;
+        color: inherit;
+        margin-bottom: $spacing-default * 8;
+    }
+
+    &__wrapper-slider-roles {
+        overflow: hidden;
+        margin-bottom: $spacing-default * 4;
+    }
+
+    &__wrapper-roles {
+        font-weight: $font-medium;
+        color: $color-primary-lighter;
+        font-size: $font-size-h1;
+        display: flex;
+        flex-direction: column;
+        transition: $transition-default;
+        transition-timing-function: cubic-bezier(0.25, 0.75, 0.5, 1.25);
+    }
+
+    &__description {
+        font-weight: $font-light;
+        max-width: $max-width-text;
+        margin-bottom: $spacing-default * 10;
+    }
+
+    &__wrapper-row-photos {
+        overflow: hidden;
+    }
+
+    &__row-photos {
+        display: flex;  
+
+        img {
+            max-height: 285px;
+        }
+    }
+}

@@ -41,20 +41,6 @@
         margin-top: $spacing-default * 4;
     }
 
-    &__wrapper-social {
-        display: flex;
-        margin-top: $spacing-default * 2;
-    }
-
-    &__social-item {
-        margin-right: $spacing-default * 2;
-        transition: $transition-default;
-
-        &:hover {
-            opacity: 0.7;
-        }
-    }
-
     &__btn {
         margin-top: $spacing-default * 3;
     }
