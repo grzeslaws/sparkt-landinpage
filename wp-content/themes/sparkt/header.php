@@ -7,6 +7,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php get_template_part("components/schedule-demo-modal-component") ?>
 <div class="c-navigation">
 	<div class="c-navigation__wrapper">
 		<div class="c-navigation__wrapper-logo-menu">

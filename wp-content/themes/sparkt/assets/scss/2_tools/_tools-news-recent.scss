@@ -1,0 +1,100 @@
+@mixin newsRecent {
+    @include wrapperPage;
+
+    margin-bottom: $spacing-default * 10;
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__headline {
+        margin-bottom: $spacing-default * 5;
+    }
+
+    &__link {
+        color: $color-gray;
+        font-size: $font-size-h3;
+        margin-bottom: $spacing-default * 2;
+        display: flex;
+    }
+
+    &__wrapper-meta {
+        display: flex;
+        font-weight: $font-light;
+        font-size: $font-size-medium;
+        justify-content: space-between;
+        color: $color-gray-light;
+        margin-bottom: $spacing-default;
+    }
+
+    &__excertpt {
+        font-weight: $font-light;
+    }
+
+    &__category {
+        a {
+            @include category;
+        }
+    }
+
+    &__img {
+        height: 260px;
+        width: 100%;
+        background-size: 100%;
+        background-position: center;
+        margin-bottom: $spacing-default * 3;
+        transition: $transition-default;
+        background-repeat: no-repeat;
+
+        &:hover {
+            background-size: 120%;
+        }
+    }
+
+    &__meta-bottom {
+        display: flex;
+        color: $color-gray-light;
+        font-weight: $font-light;
+        font-size: $font-size-medium;
+        margin-top: $spacing-default * 2;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    &__wrapper-author {
+        display: flex;
+    }
+
+    &__avatar {
+        overflow: hidden;
+        border-radius: $radius-oval;
+        max-width: $spacing-default * 3;
+        max-height: $spacing-default * 3;
+        margin-right: $spacing-default;
+    }
+
+    &__wrapper-posts-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__wrapper-content {
+        display: flex;
+    }
+
+    &__wrapper-post {
+        width: calc(50% - #{$spacing-default * 13 / 2});
+        margin-right: $spacing-default * 13;
+        margin-bottom: $spacing-default * 6;
+        position: relative;
+        padding-bottom: $spacing-default * 10;
+
+        &:nth-child(even) {
+            margin-right: unset;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+.c-search-result {
+
+    @include newsRecent;
+
+    &__wrapper {
+        width: 100%;
+    }
+}

@@ -1,0 +1,79 @@
+.c-news-latest {
+    @include wrapperPage;
+
+    position: relative;
+    margin-bottom: $spacing-default * 10;
+
+    &__wrapper {
+        &--half {
+            padding-left: $spacing-default * 4;
+            margin-left: 50%;
+            padding-top: $spacing-default * 2;
+            width: unset;
+        }
+    }
+
+    &__headline {
+        margin-bottom: $spacing-default * 3;
+    }
+
+    &__link {
+        color: $color-gray;
+        font-size: $font-size-h3;
+        margin-bottom: $spacing-default * 2;
+        display: flex;
+    }
+
+    &__wrapper-meta {
+        display: flex;
+        font-weight: $font-light;
+        font-size: $font-size-medium;
+        justify-content: space-between;
+        color: $color-gray-light;
+        margin-bottom: $spacing-default;
+    }
+
+    &__excertpt {
+        font-weight: $font-light;
+    }
+
+    &__category {
+        a {
+            background-color: rgba($color-primary, 0.5);
+            color: $color-white;
+            padding: ($spacing-default / 3) $spacing-default;
+            margin-right: $spacing-default;
+        }
+    }
+
+    &__img {
+        height: 335px;
+        width: 50%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-size: cover;
+    }
+
+    &__meta-bottom {
+        display: flex;
+        color: $color-gray-light;
+        font-weight: $font-light;
+        font-size: $font-size-medium;
+        margin-top: $spacing-default * 2;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    &__wrapper-author {
+        display: flex;
+    }
+
+    &__avatar {
+        overflow: hidden;
+        border-radius: $radius-oval;
+        max-width: $spacing-default * 3;
+        max-height: $spacing-default * 3;
+        margin-right: $spacing-default;
+    }
+}
