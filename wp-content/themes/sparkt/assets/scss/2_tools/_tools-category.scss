@@ -1,0 +1,8 @@
+@mixin category {
+    background-color: rgba($color-primary, 0.5);
+    color: $color-white;
+    padding: ($spacing-default / 3) $spacing-default;
+    margin-right: $spacing-default;
+    font-size: $font-size-medium;
+    font-weight: $font-light;
+}

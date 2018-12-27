@@ -1,0 +1,38 @@
+.c-image {
+    @include wrapperPage;
+
+    background-size: cover;
+    height: $spacing-default * 50;
+    color: $color-white;
+    position: relative;
+    margin-bottom: $spacing-default * 4;
+
+    &:after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 50%;
+        content: "";
+        background: linear-gradient(to bottom, rgba($color-black, 0) 0%, rgba($color-black, 0.8) 100%);
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: auto 0 $spacing-default * 5 0;
+        min-width: $page-width-narrow; 
+    }
+
+    &__category {
+        a {
+            @include category;
+        }
+    }
+
+    &__headline,
+    &__category  {
+        position: relative;
+        z-index: 1;
+    }
+}

@@ -7,6 +7,21 @@
         display: flex;
     }
 
+    &__wrapper-search {
+        position: relative;
+
+        &:after {
+            content: "";
+            width: 16px;
+            height: 16px;
+            background: no-repeat url($path-images + "icon-search.svg");
+            display: flex;
+            position: absolute;
+            top: $spacing-default * 2;
+            right: 10px;
+        }
+    }
+
     &__input {
         border: 0;
         border-bottom: 1px solid $color-gray;
@@ -29,6 +44,10 @@
 
         &:last-child {
             margin-right: unset;
+        }
+
+        &--search {
+            padding-right: $spacing-default * 4;
         }
     }
 

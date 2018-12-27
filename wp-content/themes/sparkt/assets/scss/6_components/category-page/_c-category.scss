@@ -1,0 +1,16 @@
+.c-category {
+
+    @include newsRecent;
+
+    &__wrapper {
+        width: 100%;
+    }
+
+    &__headline {
+
+        span {
+            font-weight: $font-light;
+            color: $color-gray-light;
+        }
+    }
+}
