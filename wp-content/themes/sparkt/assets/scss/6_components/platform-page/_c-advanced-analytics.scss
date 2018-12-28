@@ -15,19 +15,22 @@
 
     &__wrapper {
         padding-top: $spacing-section;
-        padding-bottom: $spacing-section * 2/3;
     }
 
-    &__wrapper-sides {
+    &__columns {
         display: flex;
         margin-bottom: $spacing-default * 10;
     }
 
-    &__side {
-        flex: 1;
+    &__column {
+        margin-right: $spacing-default * 10;
     }
 
-    &__p, {
+    &__graphic {
+        width: 732px;
+    }
+
+    &__p {
         font-weight: $font-light;
         position: relative;
 
@@ -38,6 +41,10 @@
             &:before {
                 background-color: $color-primary-lighter;
             }
+        }
+
+        &--last {
+            margin-bottom: $spacing-default * 10;
         }
     }
 }

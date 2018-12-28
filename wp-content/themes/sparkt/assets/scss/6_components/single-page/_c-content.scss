@@ -1,12 +1,16 @@
 .c-content {
     @include wrapperPage;
 
-    flex-direction: column;
-    align-items: center;
-
     &__wrapper {
-        max-width: $page-width-narrow;
-        font-weight: $font-light;
+        &--text {
+            max-width: $page-width-narrow;
+            font-weight: $font-light;
+        }
+
+        &--main {
+            display: flex;
+            width: 100%;
+        }
     }
 
     &__wrapper-meta {
@@ -48,16 +52,8 @@
         }
     }
 
-    &__description-author {
-
-    }
-
     &__text {
         margin-bottom: $spacing-default * 2;
-    }
-
-    &__author-details {
-
     }
 
     &__author-role {

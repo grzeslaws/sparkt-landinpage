@@ -175,8 +175,65 @@ const showHideModal = () => {
     closeEl.addEventListener("click", hideModal);
 };
 
+const viewOnScroll = () => {
+
+    class VisibleWhenScrolling {
+
+        constructor(classThatHides, classThatShows, classThatShowsAnimation) {
+            this.elementsToHides = document.querySelectorAll(`.${classThatHides}`);
+            this.classThatShows = classThatShows;
+            this.classThatShowsAnimation = classThatShowsAnimation;
+        }
+    
+        initShowAndHideElements() {
+    
+            Array.from(this.elementsToHides).forEach((item) => {
+    
+                let elementToAppearTopValue = item.getBoundingClientRect().top;
+                let elementToAppearHeight = item.getBoundingClientRect().height;
+                
+                if ((elementToAppearTopValue - window.innerHeight + elementToAppearHeight / 4) < 0) {
+                    item.classList.add(this.classThatShows);
+                    item.classList.add(this.classThatShowsAnimation);
+                } 
+                if ((elementToAppearTopValue - window.scrollY > window.innerHeight || (elementToAppearTopValue +  elementToAppearHeight) < 0) && item.classList.contains(this.classThatShows)) {
+                    item.classList.remove(this.classThatShows);
+                }
+            });
+        }
+    
+        initShowAndHideElementsOnScroll() {
+    
+            window.onscroll = () => {
+                this.initShowAndHideElements();
+            }
+        }
+    }
+    
+    const visibleWhenScrolling = new VisibleWhenScrolling("u-detect-to-hide", "u-visible-on-scroll", "u-visible-animation-on-scroll");
+    visibleWhenScrolling.initShowAndHideElements();
+    visibleWhenScrolling.initShowAndHideElementsOnScroll();
+};
+
+const navigationMobile = () => {
+    const classToAdd = "mobile-menu";
+    const hamEl = document.querySelector("[data-hamburger]");
+    hamEl.addEventListener("click", () => {
+        const bodyEl = document.querySelector("body");
+        if (!bodyEl.classList.contains(classToAdd)) {
+            bodyEl.classList.add(classToAdd);
+            bodyEl.style.overflow = "hidden";
+        } else {
+            bodyEl.classList.remove(classToAdd);
+            bodyEl.style.overflow = "unset";
+        }
+    })
+}
+
 showHideModal();
 roleSlider();
 showHidePostIcon();
 setMenuHeight();
 setWidthOfProjectPhoto();
+viewOnScroll();
+navigationMobile();

@@ -7,6 +7,11 @@
     padding-top: $spacing-section;
     margin-bottom: $spacing-section;
 
+    @include mq($until: large) {
+        flex-direction: column;
+    }
+
+
     &__wrapper {
         color: $color-white;
     }
@@ -19,6 +24,10 @@
     &__wrapper-sections {
         display: flex;
         margin-bottom: $spacing-default * 6;
+
+        @include mq($until: large) {
+            flex-direction: column;
+        }
     }
 
     &__section-description {
@@ -26,11 +35,15 @@
         font-weight: $font-light;
         margin-right: $spacing-default * 7;
         font-size: $font-size-paragraph;
-        margin-bottom: $spacing-default * 12;   
+        margin-bottom: $spacing-default * 12;
     }
 
     &__section-headline {
         font-size: $font-size-h3;
+
+        @include mq($until: large) {
+            display: none;
+        }
     }
 
     &__warpper-cta {
@@ -40,6 +53,10 @@
     &__side {
         flex: 1;
         margin-right: $spacing-default * 4;
+
+        @include mq($until: large) {
+            flex: unset;
+        }
     }
 
     &__headline-cta {
@@ -50,5 +67,9 @@
 
     &__img {
         max-width: $page-width-narrow;
+
+        @include mq($until: large) {
+            display: none;
+        }
     }
 }

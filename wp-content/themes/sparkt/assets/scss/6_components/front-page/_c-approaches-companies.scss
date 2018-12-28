@@ -25,8 +25,12 @@
 
     &__wrapper-box {
         display: flex;
-        width: 1070px;
+        max-width: $page-width-narrower;
         align-items: flex-start;
+
+        @include mq($until: large) {
+            flex-direction: column;
+        }
     }
 
     &__box {
@@ -53,6 +57,12 @@
 
         &--reset-padding-bottom {
             padding-bottom: unset;
+        }
+
+        @include mq($until: large) {
+            margin-right: unset;
+            margin-bottom: $spacing-default * 4;
+            width: 100%;
         }
     }
 
