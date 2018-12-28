@@ -6,6 +6,10 @@
 
     &__wrapper {
         padding-left: 30%;
+
+        @include mq($until: large) {
+            padding-left: unset;
+        }
     }
 
     &__headline {
@@ -17,6 +21,16 @@
         display: flex;
         font-weight: $font-light;
         margin-bottom: $spacing-default * 8;
+
+        @include mq($until: large) {
+            flex-direction: column;
+        }
+    }
+
+    &__section {
+        @include mq($until: large) {
+            margin-bottom: $spacing-default * 6;
+        }
     }
 
     &__description {

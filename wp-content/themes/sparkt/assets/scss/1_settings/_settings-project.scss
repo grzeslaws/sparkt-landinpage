@@ -68,6 +68,7 @@ $padding-default: $spacing-default * 3;
 // Transition
 $transition-default: all 300ms ease;
 $transition-slow: all 600ms ease;
+$transition-cubic: 1200ms cubic-bezier(.175, .885, .32, 1.275);
 
 // Radius
 $radius-oval: 50px;

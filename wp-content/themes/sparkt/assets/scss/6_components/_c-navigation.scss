@@ -1,6 +1,8 @@
 .c-navigation {
+    $c: &;
+
     @include wrapperPage;
-    
+
     align-items: center;
     height: $menu-height;
     position: fixed;
@@ -10,9 +12,24 @@
     z-index: 11;
     transition: height 300ms ease;
 
+    @include mq($until: large) {
+
+        .mobile-menu & {
+            height: 100%;
+            background-color: $color-white;
+        }
+    }
+
+
     &__logo-link {
         width: 83px;
         height: 40px;
+
+        @include mq($until: large) {
+            .mobile-menu & {
+                margin-bottom: $spacing-default * 4;
+            }
+        }
     }
 
     &__wrapper {
@@ -21,12 +38,36 @@
         align-items: center;
         width: 100%;
 
+        @include mq($until: large) {
+
+            .mobile-menu & {
+                flex-direction: column;
+                align-items: self-start;
+            }
+        }
+
         ul {
             display: flex;
             margin-left: $spacing-default * 6;
 
+            @include mq($until: large) {
+                flex-direction: column;
+                margin-left: unset;
+                display: none;
+
+                .mobile-menu & {
+                    display: flex;
+                }
+            }
+
+
             li {
                 margin-right: $spacing-default * 4;
+
+                @include mq($until: large) {
+                    margin-bottom: $spacing-default * 3;
+                }
+
 
                 &.current_page_item {
                     a {
@@ -71,10 +112,77 @@
     &__wrapper-logo-menu {
         display: flex;
         align-items: center;
+
+        @include mq($until: large) {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
     }
 
     &--lower {
         height: $menu-height-after-scroll;
         background-color: $color-white;
+    }
+
+    &__hamburger {
+        width: $spacing-default * 3;
+        height: 18px;
+        box-shadow: inset 0 -2px 0 0 $color-primary;
+        position: relative;
+        cursor: pointer;
+        transition: $transition-default;
+        position: fixed;
+        right: $spacing-default * 4;
+        top: $spacing-default * 4;
+        display: none;
+
+        &:before,
+        &:after {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $color-primary;
+            content: "";
+            transform-origin: center center;
+            transition: $transition-default;
+        }
+
+        &:before {
+            top: 0;
+        }
+
+        &:after {
+            top: calc(50% - 1px);
+        }
+
+        .mobile-menu & {
+            box-shadow: unset;
+
+            &:before {
+                transform: rotate(45deg);
+                top: 50%;
+            }
+
+            &:after {
+                transform: rotate(-45deg);
+                top: 50%;
+            }
+        }
+
+        @include mq($until: large) {
+            display: block;
+        }
+    }
+
+    &__btn {
+        @include mq($until: large) {
+            display: none;
+
+            .mobile-menu & {
+                display: flex;
+            }
+        }
     }
 }

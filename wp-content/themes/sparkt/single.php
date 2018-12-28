@@ -11,21 +11,24 @@
         </div>
     <?php endif; ?>
     <div class="c-content">
-        <div class="c-content__wrapper">
-            <div class="c-content__wrapper-meta">
-                <div class="c-content__wrapper-author">
-                    <?php echo get_avatar( get_the_author_meta( 'user_email' ), 24 ) ?>
-                    <?php the_author(); ?>
+        <div class="c-content__wrapper c-content__wrapper--main">
+            <?php get_template_part("components/sidebar") ?>
+            <div class="c-content__wrapper c-content__wrapper--text">
+                <div class="c-content__wrapper-meta">
+                    <div class="c-content__wrapper-author">
+                        <?php echo get_avatar( get_the_author_meta( 'user_email' ), 24 ) ?>
+                        <?php the_author(); ?>
+                    </div>
+                    <div class="c-content__date"><?php the_time("d.m.Y"); ?></div>
                 </div>
-                <div class="c-content__date"><?php the_time("d.m.Y"); ?></div>
-            </div>
-            <div class="c-content__text"><?php the_content(); ?></div>
-            <div class="c-content__author-wrapper">
-                <div class="c-content__avatar"><?php echo get_avatar( get_the_author_meta( 'user_email' ), 50 ) ?></div>
-                <div class="c-content__author-details">
-                    <div class="c-content__author-name"><?php echo get_the_author_meta( 'first_name' ) ?> <?php echo get_the_author_meta( 'last_name' ) ?></div>
-                    <div class="c-content__author-role"><?php echo get_the_author_meta( 'nickname' ) ?></div>
-                    <div class="c-content__author-description"><?php echo get_the_author_meta( 'description' ) ?></div>
+                <div class="c-content__text"><?php the_content(); ?></div>
+                <div class="c-content__author-wrapper">
+                    <div class="c-content__avatar"><?php echo get_avatar( get_the_author_meta( 'user_email' ), 50 ) ?></div>
+                    <div class="c-content__author-details">
+                        <div class="c-content__author-name"><?php echo get_the_author_meta( 'first_name' ) ?> <?php echo get_the_author_meta( 'last_name' ) ?></div>
+                        <div class="c-content__author-role"><?php echo get_the_author_meta( 'nickname' ) ?></div>
+                        <div class="c-content__author-description"><?php echo get_the_author_meta( 'description' ) ?></div>
+                    </div>
                 </div>
             </div>
         </div>

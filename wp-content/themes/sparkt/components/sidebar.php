@@ -18,8 +18,9 @@
                 "title_li" => "",
             );
             foreach (get_categories($args) as $category) {
+                $class = ( is_category( $category->name ) ) ? 'c-sidebar__category-item-link--active' : '';
                 echo '<li class="c-sidebar__category-item">
-                    <a class="c-sidebar__category-item-link" href="' . get_category_link($category->term_id) . '" rel="bookmark">' . $category->name . '</a>
+                    <a class="c-sidebar__category-item-link ' . $class . '" href="' . get_category_link($category->term_id) . '" rel="bookmark">' . $category->name . '</a>
                 </li>';
             }
         ?>
