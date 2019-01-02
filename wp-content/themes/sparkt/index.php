@@ -25,7 +25,7 @@
                                 </div>
                                 <div class="c-news-latest__time-to-read">5 min read</div>
                             </div>
-                            <a href="' . get_permalink($recent["ID"]) . '" class="o-btn o-btn--no-shadow"><div class="o-btn__mask">Continue reading</div></a>
+                            <a href="' . get_permalink($recent["ID"]) . '" class="o-btn o-btn--no-shadow c-news-latest__btn"><div class="o-btn__mask">Continue reading</div></a>
                         </div>
                     </div> ';
 	}
@@ -44,6 +44,10 @@
                                 'offset' => 1,
                                 's' => $s, );
                 $recent_posts = wp_get_recent_posts( $args );
+                // echo "asasas";
+                if( get_query_var('paged') == 3 ){ 
+                    echo "pagged";
+                }
                 foreach( $recent_posts as $recent ){
                             echo '<div class="c-news-recent__wrapper-post">
                                         <div class="c-news-recent__wrapper-meta">

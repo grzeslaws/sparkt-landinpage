@@ -6,5 +6,10 @@
         max-width: $pageWidth;
         margin-left: $spacing-default * 6;
         margin-right: $spacing-default * 6;
+
+        @include mq($until: medium) {
+            margin-left: $spacing-default * 4;
+            margin-right: $spacing-default * 4;
+        }
     }
 }

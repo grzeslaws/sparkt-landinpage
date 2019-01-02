@@ -27,10 +27,19 @@
         height: $page-width-narrow;
         justify-content: center;
         margin-bottom: $spacing-default * 8;
+
+        @include mq($until: large) {
+            height: auto;
+            align-items: flex-start;
+        }
     }
 
     &__img {
         max-width: 854px;
+
+        @include mq($until: large) {
+            display: none;
+        }
     }
 
     &__description-img {
@@ -40,30 +49,47 @@
         padding-left: $spacing-default * 2;
         padding-right: $spacing-default * 2;
 
+        @include mq($until: large) {
+            position: unset;
+            max-width: unset;
+            padding-left: unset;
+            padding-right: unset;
+            margin-bottom: $spacing-default * 2;
+        }
+
+
         &:before {
             content: "";
             display: flex;
             width: 1px;
             position: absolute;
             background-color: $color-primary;
+
+            @include mq($until: large) {
+                display: none;
+            }
         }
 
         &--1 {
             text-align: right;
             top: 0px;
-            left: 265px;
+            right: calc(50% + 93px);
 
             &:before {
                 right: 0;
                 top: 0;
                 height: 145px;
             }
+
+            @include mq($until: large) {
+                text-align: unset;
+            }
         }
 
         &--2 {
             text-align: left;
             top: 0px;
-            left: 868px;
+            right: calc(50% - 506px);
 
             &:before {
                 left: 0;
@@ -75,19 +101,23 @@
         &--3 {
             text-align: right;
             top: 529px;
-            left: 181px;
+            right: calc(50% + 190px);
 
             &:before {
                 right: 0;
                 bottom: 0;
                 height: 145px;
             }
+
+            @include mq($until: large) {
+                text-align: unset;
+            }
         }
 
         &--4 {
             text-align: left;
             top: 529px;
-            left: 787px;
+            right: calc(50% - 429px);
 
             &:before {
                 left: 0;

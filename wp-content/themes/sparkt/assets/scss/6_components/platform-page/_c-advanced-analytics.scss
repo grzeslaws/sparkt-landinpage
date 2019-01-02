@@ -28,6 +28,10 @@
 
     &__graphic {
         width: 732px;
+
+        @include mq($until: large) {
+            display: none;
+        }
     }
 
     &__p {

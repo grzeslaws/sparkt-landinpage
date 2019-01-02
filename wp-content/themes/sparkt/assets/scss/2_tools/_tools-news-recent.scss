@@ -5,6 +5,10 @@
 
     &__wrapper {
         display: flex;
+
+        @include mq($until: large) {
+            flex-direction: column;
+        }
     }
 
     &__headline {
@@ -80,6 +84,10 @@
     &__wrapper-posts-list {
         display: flex;
         flex-wrap: wrap;
+
+        @include mq($until: medium) {
+            flex-direction: column;
+        }
     }
 
     &__wrapper-content {
@@ -92,6 +100,10 @@
         margin-bottom: $spacing-default * 6;
         position: relative;
         padding-bottom: $spacing-default * 10;
+
+        @include mq($until: medium) {
+            width: 100%;
+        }
 
         &:nth-child(even) {
             margin-right: unset;

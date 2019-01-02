@@ -4,12 +4,29 @@
     position: relative;
     margin-bottom: $spacing-default * 10;
 
+    @include mq($until: large) {
+        flex-direction: column;
+    }
+
+
     &__wrapper {
         &--half {
             padding-left: $spacing-default * 4;
             margin-left: 50%;
             padding-top: $spacing-default * 2;
             width: unset;
+            display: flex;
+            flex-direction: column;
+
+            @include mq($until: large) {
+                margin-left: $spacing-default * 6;
+                padding-left: unset;
+            }
+
+
+            @include mq($until: medium) {
+                margin-left: $spacing-default * 4;
+            }
         }
     }
 
@@ -47,12 +64,19 @@
     }
 
     &__img {
-        height: 335px;
+        height: 100%;
         width: 50%;
         position: absolute;
         left: 0;
         top: 0;
         background-size: cover;
+        background-position: center;
+
+        @include mq($until: large) {
+            position: unset;
+            width: 100%;
+            margin-bottom: $spacing-default * 2;
+        }
     }
 
     &__meta-bottom {
@@ -75,5 +99,9 @@
         max-width: $spacing-default * 3;
         max-height: $spacing-default * 3;
         margin-right: $spacing-default;
+    }
+
+    &__btn {
+        width: max-content;
     }
 }

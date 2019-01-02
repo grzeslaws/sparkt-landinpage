@@ -19,17 +19,29 @@
         height: 430px;
         max-width: $page-width-narrower;
         width: 100%;
+
+        @include mq($until: large) {
+            height: auto;
+        }
     }
 
     &__photo {
         position: absolute;
         box-shadow: $shadow-images;
 
+        @include mq($until: large) {
+            position: unset;
+        }
+
         &--1 {
             width: 640px;
             z-index: 1;
             left: 0;
             top: 0;
+
+            @include mq($until: large) {
+                width: 100%;
+            }
         }
 
         &--2 {
@@ -37,6 +49,10 @@
             z-index: 2;
             left: 45%;
             top: 37%;
+
+            @include mq($until: large) {
+                display: none;
+            }
         }
 
         &--3 {
@@ -44,6 +60,10 @@
             z-index: 4;
             left: 80%;
             top: 0;
+
+            @include mq($until: large) {
+                display: none;
+            }
         }
 
         &--4 {
@@ -51,6 +71,10 @@
             z-index: 1;
             right: 0;
             top: 27%;
+
+            @include mq($until: large) {
+                display: none;
+            }
         }
     }
 }

@@ -1,9 +1,16 @@
 .c-sidebar {
     display: flex;
     flex-direction: column;
-    min-width: 270px;
+    min-width: $sidebar-width;
     margin-right: $spacing-default * 6;
     margin-top: $spacing-default * 6;
+
+    @include mq($until: large) {
+        margin-right: unset;
+        margin-top: unset;
+        margin-bottom: $spacing-default * 4;
+    }
+
 
     &__headline {
         font-weight: $font-light;

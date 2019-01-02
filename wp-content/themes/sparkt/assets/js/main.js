@@ -80,42 +80,6 @@ const roleSlider = () => {
     }, 3000);
 };
 
-// const photosSlider = () => {
-//     if (!document.querySelector("[wrapper-slider-photos]")) {
-//         return;
-//     }
-
-//     const wrapperSliderPhotosEl = document.querySelector("[wrapper-slider-photos]");
-//     const wrapperPhotosEl = document.querySelector("[wrapper-photos]");
-//     const photoEl = wrapperSliderPhotosEl.querySelector("img");
-
-//     const firstChild = wrapperPhotosEl.firstElementChild;
-//     const firstChildClone = firstChild.cloneNode(true);
-//     wrapperPhotosEl.appendChild(firstChildClone);
-
-//     const photoWidth = photoEl.getBoundingClientRect().width;
-//     let counter = 1;
-//     let resetTranslate;
-//     const photosArr = Array.from(wrapperSliderPhotosEl.querySelectorAll("img"));
-
-//     wrapperSliderPhotosEl.style.height = `${photoWidth}px`;
-//     setInterval(() => {
-//         if (counter < photosArr.length - 1) {
-//             clearInterval(resetTranslate);
-//             wrapperPhotosEl.style.transform = `translateX(${-photoWidth * counter}px)`;
-//             wrapperPhotosEl.style.transitionDuration = "600ms";
-//             counter++;
-//         } else {
-//             wrapperPhotosEl.style.transform = `translateX(${-photoWidth * counter}px)`;
-//             resetTranslate = setInterval(() => {
-//                 wrapperPhotosEl.style.transform = "translateX(0)";
-//                 wrapperPhotosEl.style.transitionDuration = "0s";
-//             }, 1000);
-//             counter = 1;
-//         }
-//     }, 3000);
-// };
-
 const carousel = () => {
     const wrapper = document.querySelector(".c-carousel");
     let counter = 0;

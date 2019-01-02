@@ -35,5 +35,15 @@
         display: flex;
         font-weight: $font-light;
         margin-bottom: $spacing-default * 14;
+
+        @include mq($until: large) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__section {
+        @include mq($until: large) {
+            margin-bottom: $spacing-default * 6;
+        }
     }
 }
