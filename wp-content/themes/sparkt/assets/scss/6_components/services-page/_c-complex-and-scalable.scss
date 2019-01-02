@@ -18,6 +18,16 @@
         font-weight: $font-light;
         padding-left: 30%;
         margin-bottom: $spacing-default * 12;
+
+        @include mq($until: large) {
+            padding-left: unset;
+            flex-wrap: wrap;
+            margin-bottom: $spacing-default * 10;
+        }
+    }
+
+    &__section {
+        margin-bottom: $spacing-default * 6;
     }
 
     &__description {

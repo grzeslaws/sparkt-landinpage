@@ -63,6 +63,10 @@
         box-shadow: unset;
     }
 
+    &--margin-top {
+        margin-top: $spacing-default;
+    }
+
     &__mask {
         position: absolute;
         left: 2px;
@@ -82,14 +86,16 @@
     }
 
     .c-navigation--lower & {
-        background: $gradient-default-horizontal;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        box-shadow: unset;
+        @include mq($from: large) {
+            background: $gradient-default-horizontal;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            box-shadow: unset;
 
-        &:before,
-        &:after {
-            display: none;
+            &:before,
+            &:after {
+                display: none;
+            }
         }
     }
 }

@@ -7,13 +7,16 @@
     font-weight: $font-light;
     padding-top: $spacing-default * 3;
     padding-bottom: $spacing-default * 12;
-    flex-direction: column;
-    align-items: center;
+    display: block;
 
     &__wrapper {
         margin-top: $spacing-default * 8;
         display: flex;
-        width: 100%;
+
+        @include mq($until: large) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__column {
@@ -23,6 +26,17 @@
     &__logo-link {
         margin-bottom: $spacing-default * 4;
         display: flex;
+
+        @include mq($until: large) {
+            justify-content: center;
+        }
+    }
+
+    &__address {
+        @include mq($until: large) {
+            text-align: center;
+            margin-bottom: $spacing-default * 4;
+        }
     }
 
     &__back-to-top {
@@ -40,6 +54,10 @@
     &__title {
         font-weight: $font-medium;
         margin-top: $spacing-default * 4;
+
+        @include mq($until: large) {
+            text-align: center;
+        }
     }
 
     &__btn {
@@ -71,12 +89,27 @@
         }
     }
 
+    &__headline {
+        @include mq($until: large) {
+            text-align: center;
+        }
+    }
+
     .menu-main-menu-container,
     &__wrapper-privacy {
+        @include mq($until: large) {
+            margin-bottom: $spacing-default * 4;
+        }
+
 
         li,
         &__privacy-item {
             margin-bottom: $spacing-default * 2;
+
+            @include mq($until: large) {
+                text-align: center;
+            }
+
 
             a,
             &__privacy-link {

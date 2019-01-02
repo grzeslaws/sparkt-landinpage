@@ -3,6 +3,11 @@
     &__wrapper-social {
         display: flex;
         margin-top: $spacing-default * 2;
+
+        @include mq($until: large) {
+            justify-content: center;
+            margin-bottom: $spacing-default * 4;
+        }
     }
 
     &__social-item {
@@ -11,6 +16,10 @@
 
         &:hover {
             opacity: 0.7;
+        }
+
+        &:last-child {
+            margin-right: unset;
         }
     }
 }

@@ -18,6 +18,8 @@ $color-primary-lighter: #FFA800;
 $color-secondary: #2ACBB7;
 $color-secondary-lighter: #3BA699;
 
+$color-error: #ff4c4c;
+
 // Gradients
 $gradient-default: linear-gradient(to top, $color-primary-lighter 0%, $color-primary 100%);
 $gradient-default-horizontal: linear-gradient(to right, $color-primary-lighter 0%, $color-primary 100%);
@@ -36,6 +38,7 @@ $page-width: 1360px;
 $page-width-narrower: 1070px;
 $page-width-narrow: 640px;
 $max-width-text: $spacing-default * 107;
+$sidebar-width: 270px;
 
 // Heights
 $menu-height: 88px;
@@ -58,6 +61,8 @@ $font-size-milli: 12px;
 
 $font-light: 300;
 $font-medium: 500;
+
+$letter-spacing-default: 1.8px;
 
 // Paths
 $path-images: '../images/';

@@ -6,6 +6,7 @@
     color: $color-white;
     position: relative;
     margin-bottom: $spacing-default * 4;
+    background-position: center;
 
     &:after {
         position: absolute;
@@ -20,8 +21,14 @@
     &__wrapper {
         display: flex;
         flex-direction: column;
-        margin: auto 0 $spacing-default * 5 0;
-        min-width: $page-width-narrow; 
+        padding-left: $sidebar-width + $spacing-default * 6;
+        margin-top: auto;
+        margin-bottom: $spacing-default * 5;
+        width: 100%;
+
+        @include mq($until: large) {
+            padding-left: unset;
+        }
     }
 
     &__category {
@@ -31,7 +38,7 @@
     }
 
     &__headline,
-    &__category  {
+    &__category {
         position: relative;
         z-index: 1;
     }

@@ -17,6 +17,9 @@
         .mobile-menu & {
             height: 100%;
             background-color: $color-white;
+            align-items: unset;
+            padding-top: $spacing-default * 3;
+            padding-bottom: $spacing-default * 3;
         }
     }
 

@@ -28,6 +28,10 @@
 
     &__wrapper {
         display: flex;
+
+        @include mq($until: large) {
+            flex-direction: column;
+        }
     }
 
     &__description {
@@ -55,6 +59,12 @@
         color: $textColor;
         max-width: $spacing-section * 3;
 
+        @include mq($until: large) {
+            max-width: unset;
+            padding-bottom: unset;
+            margin-bottom: $spacing-default * 8;
+        }
+
         &:before {
             content: "";
             position: absolute;
@@ -63,6 +73,10 @@
             height: 100%;
             width: 1000%;
             background-color: rgba($color-gray-lighter, 0.15);
+
+            @include mq($until: large) {
+                width: 100%;
+            }
         }
     }
 
@@ -72,6 +86,10 @@
         position: absolute;
         left: 0;
         top: 0;
+
+        @include mq($until: large) {
+            width: 100% !important;
+        }
     }
 
     &__wrapper-tools {

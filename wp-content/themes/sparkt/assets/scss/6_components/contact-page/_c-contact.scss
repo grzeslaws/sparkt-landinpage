@@ -3,6 +3,7 @@
 
     &__wrapper {
         margin-bottom: $spacing-section;
+        width: 100%;
     }
 
     &__description {
@@ -21,6 +22,10 @@
 
     &__wrapper-columns {
         display: flex;
+
+        @include mq($until: large) {
+            flex-direction: column;
+        }
     }
 
     &__column {
@@ -28,8 +33,18 @@
         margin-right: $spacing-default * 4;
         flex-direction: column;
 
+        @include mq($until: large) {
+            margin-right: unset;
+        }
+
         &:last-child {
             margin-right: unset;
+
+            @include mq($until: large) {
+                margin-right: unset;
+                margin-top: $spacing-default * 8;
+                text-align: center;
+            }
         }
     }
 
@@ -40,5 +55,9 @@
 
     &__wrapper-address {
         padding-left: $spacing-default * 20;
+
+        @include mq($until: large) {
+            padding-left: unset;
+        }
     }
 }

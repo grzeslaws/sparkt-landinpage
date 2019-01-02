@@ -37,7 +37,7 @@
             </ul>
         </div>
         <div class="c-footer__column">
-            <h3>Boost your business</h3>
+            <h3 class="c-footer__headline">Boost your business</h3>
             <button class="o-btn c-footer__btn">Schedule demo</button>
         </div>
     </div>

@@ -13,7 +13,7 @@
     <div class="c-content">
         <div class="c-content__wrapper c-content__wrapper--main">
             <?php get_template_part("components/sidebar") ?>
-            <div class="c-content__wrapper c-content__wrapper--text">
+            <div class="c-content__wrapper-text">
                 <div class="c-content__wrapper-meta">
                     <div class="c-content__wrapper-author">
                         <?php echo get_avatar( get_the_author_meta( 'user_email' ), 24 ) ?>
